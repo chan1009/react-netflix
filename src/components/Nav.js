@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Nav.css";
 export default function Nav() {
   const [show, setShow] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
@@ -11,6 +12,7 @@ export default function Nav() {
       }
     });
   });
+
   return (
     <nav className={`nav ${show && "nav__black"} `}>
       <img
